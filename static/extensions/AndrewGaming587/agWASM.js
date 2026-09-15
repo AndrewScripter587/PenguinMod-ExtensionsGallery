@@ -568,6 +568,13 @@
         convertValue: convertValue
     }
 
+    const agBufferBlock = {
+        forceOutputType: "ArrayBuffer",
+        disableMonitor: true,
+        blockType: BlockType.REPORTER,
+        blockShape: BlockShape.SQUARE
+    }
+
     if (!Scratch.extensions.unsandboxed) {
         alert("This extension needs to be unsandboxed to run!")
         return
@@ -858,7 +865,7 @@
                     opcode: "getMemoryBuffer",
                     text: "get attached array buffer of memory [MEMORY]",
                     blockType: BlockType.REPORTER,
-                    ...vm.agBuffer.Block,
+                    ...agBufferBlock,
                     arguments: {
                         MEMORY: agWASM.MemArgument,
                     }
