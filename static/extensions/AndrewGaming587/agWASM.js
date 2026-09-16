@@ -134,11 +134,11 @@
                 source ??= 0;
                 
                 if (debug.bindImportsToInstance) {
-                    console.log(importObject)
+                    // console.log(importObject)
                     importObject = Object.fromEntries(Object.entries(importObject).map(([key, value]) => {
                         return [key,WASMInstanceType.bindImports(value,this)];
                     }))
-                    console.log(importObject)
+                    // console.log(importObject)
 
                 }
                 this.importObject = importObject;
