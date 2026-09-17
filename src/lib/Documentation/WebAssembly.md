@@ -72,6 +72,8 @@ When a WASM function that calls a suspending function is used from outside WASM,
 # Notes
 Using JSV2 is heavily recommended for importing functions into WebAssembly instances.
 
+**Using emscripten to create wasm stuff to use with this extension is not recommended as it can be a pain to get it to work with this extension!**
+
 # Blocks
 TODO: Write this
 
